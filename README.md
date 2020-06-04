@@ -1,3 +1,22 @@
+# Yajra Datatables SetUp Instructions
+<ul>
+    <li>Download/Clone the Yajra_datatables_task repository.</li>
+    <li>Place it in xampp/htdocs folder.</li>
+    <li>Open Command Prompt cd.... to that folder.</li>
+    <li>Create MYSQL based database and connect it with project(in <b>.env</b> file of project).</li>
+    <li>After successful migration run command <b><i>php artisan migrate:fresh --seed</i></b>. This command create tables in database and seed data as well into the database.</li>
+</ul>
+<p>Before running the above command make sure to reduce the number of customers from 1000000 to 500/whatever you want in <b>CustomerSeeder.php file</b>. Because it take a lot of time to seed if we run command with 1000000 customers.</p>
+<p>There are 5 routes in this project: 
+    <ul>
+        <li><b>"/"</b> -> use for datatables without yajra implementation</li>
+        <li><b>"yajra-datatables"</b> -> use for datatables with yajra implementation</li>
+        <li><b>"customers"</b> -> use to get customers in blade view</li>
+        <li><b>"excel-download"</b> -> use for download customers data in excel file.</li>
+        <li><b>"pdf-download"</b> -> use for download customers data in pdf file.</li> 
+    </ul>
+</p>
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
